@@ -51,8 +51,8 @@ realtimeTrains.getTrains("KGX", 10); // Defaults to 15 (Max).
     "stp": "WTT",
     "plannedArrival": "2055",      
     "actualArrival": "2056",       
-    "plannedDeparture": null, // Sometimes if the field for this is blank on the website, it just returns null.
-    "actualDeparture": null,  // Same goes for here.
+    "plannedDeparture": null,
+    "actualDeparture": null,
     "origin": {
       "name": "Edinburgh",
       "code": "EDB"
@@ -70,7 +70,7 @@ realtimeTrains.getTrains("KGX", 10); // Defaults to 15 (Max).
         "actualArrival": "1709",
         "plannedDeparture": "1712",
         "actualDeparture": "1712",
-        "delay": null // This means there is no delay.
+        "delay": null
       },
       {
         "name": "Newcastle",
@@ -80,7 +80,7 @@ realtimeTrains.getTrains("KGX", 10); // Defaults to 15 (Max).
         "actualArrival": "1754",
         "plannedDeparture": "1759",
         "actualDeparture": "1759",
-        "delay": null // This means there is no delay.
+        "delay": null
       },
       {
         "name": "Darlington",
@@ -90,7 +90,7 @@ realtimeTrains.getTrains("KGX", 10); // Defaults to 15 (Max).
         "actualArrival": "1825",
         "plannedDeparture": "1829",
         "actualDeparture": "1829",
-        "delay": null // This means there is no delay.
+        "delay": null
       },
       {
         "name": "York",
@@ -100,7 +100,7 @@ realtimeTrains.getTrains("KGX", 10); // Defaults to 15 (Max).
         "actualArrival": "1855",
         "plannedDeparture": "1858",
         "actualDeparture": "1859",
-        "delay": "+1" // This means there is 1 minute delay.
+        "delay": "+1"
       },
       {
         "name": "Stevenage",
@@ -110,7 +110,7 @@ realtimeTrains.getTrains("KGX", 10); // Defaults to 15 (Max).
         "actualArrival": "2033",
         "plannedDeparture": "2030",
         "actualDeparture": "2035",
-        "delay": "+5" // This means there is 5 minutes delay.
+        "delay": "+5"
       },
       {
         "name": "London Kings Cross",
@@ -120,7 +120,7 @@ realtimeTrains.getTrains("KGX", 10); // Defaults to 15 (Max).
         "actualArrival": "2054",
         "plannedDeparture": null,
         "actualDeparture": null,
-        "delay": "-1" // If the delay is negative, it means the train is 1 minute early.
+        "delay": "-1"
       }
     ],
     "platform": "0",
@@ -133,6 +133,14 @@ realtimeTrains.getTrains("KGX", 10); // Defaults to 15 (Max).
     "runsAsRequired": false
   }
 ```
+
+If any of the Arrival or Departure Times are `null`, the field for that data on the timetable has been left blank.
+
+A `'+'` symbol in the Delay indicates that the train is delayed by `'x'` minutes.
+
+A `'-'` symbol in the Delay indicates that the train is early by `'x'` minutes.
+
+If No Delay is present, the Delay field will be `null`.
 
 ## Contact Me
 
